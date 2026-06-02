@@ -1,6 +1,21 @@
 # 企业知识库智能问答系统
 
-基于 Vue3、FastAPI、RAG、多源检索和会话记忆的企业知识库智能问答系统。当前项目以招投标业务知识为主要示例场景，支持结构化数据查询、法规知识库检索、企业风险查询、实时招标信息查询、联网搜索和流式问答。
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.115%2B-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Vue](https://img.shields.io/badge/Vue-3.x-42B883?style=flat-square&logo=vue.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-5.x-646CFF?style=flat-square&logo=vite&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-Structured%20Data-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![Milvus](https://img.shields.io/badge/Milvus-Vector%20Search-00A1EA?style=flat-square)
+![Redis](https://img.shields.io/badge/Redis-Cache-DC382D?style=flat-square&logo=redis&logoColor=white)
+![RAG](https://img.shields.io/badge/RAG-BM25%20%2B%20Vector%20%2B%20Rerank-7C3AED?style=flat-square)
+![Status](https://img.shields.io/badge/status-MVP-0A7BBB?style=flat-square)
+
+企业知识库智能问答系统是一个面向企业内部知识问答与业务资料检索的智能系统原型。它围绕“多轮提问、问题拆分、结构化数据查询、法规/文档知识库检索、联网搜索、企业风险查询、流式回答”这一条主流程，帮助用户从企业知识库和外部数据源中快速获得可追溯的回答。
+
+当前项目以招投标业务知识为主要示例场景：系统可以查询企业、项目、产品、供应商等结构化数据，也可以检索招投标法规资料、实时招标信息和企业风险信息。项目定位为企业内部 MVP，适合流程验证、样例测试和后续产品化开发，不建议直接作为无人值守的正式决策系统。
+
+> 安全提醒：真实 API Key、数据库密码、Redis 密码、企查查/剑鱼接口密钥、`.env`、生成的索引文件、运行缓存和评测产物都不应提交到 Git。公开仓库前请检查 `.env`、`node_modules/`、`__pycache__/`、`*.pkl`、`*_bm25.txt` 和历史提交。
 
 ## 项目定位
 
@@ -34,41 +49,14 @@
 
 ## 技术栈
 
-前端：
-
-- Vue3
-- TypeScript
-- Vite
-- Pinia
-- Vue Router
-- Marked
-
-后端：
-
-- FastAPI
-- Uvicorn
-- Pydantic
-- OpenAI-compatible SDK
-- LangChain
-- SQLAlchemy
-- pandas
-- MySQL
-- Redis
-- Milvus
-- BM25
-- jieba
-- SimHash
-
-AI / RAG：
-
-- 问题分类与拆分
-- Query rewrite
-- BM25 关键词召回
-- BGE-M3 embedding
-- Milvus dense vector search
-- HyDE 检索增强
-- BGE reranker
-- 多源检索结果融合
+| 层级 | 技术 |
+| --- | --- |
+| 前端 | Vue3、TypeScript、Vite、Pinia、Vue Router、Marked |
+| 后端 | FastAPI、Uvicorn、Pydantic、OpenAI-compatible SDK |
+| 数据 | MySQL、Redis、Milvus |
+| 检索 | BM25、jieba、BGE-M3 embedding、Milvus dense vector search、BGE reranker、SimHash |
+| AI 链路 | 问题分类与拆分、Query rewrite、HyDE、RAG、多源检索结果融合、流式生成 |
+| 工程文档 | README、从零开发 Trace、环境变量模板、Git 忽略规则 |
 
 ## 目录结构
 
