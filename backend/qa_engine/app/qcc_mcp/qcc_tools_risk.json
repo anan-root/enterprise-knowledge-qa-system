@@ -1,0 +1,818 @@
+[
+  {
+    "name": "get_administrative_penalty",
+    "title": "行政处罚",
+    "description": "用于查询企业受到的行政处罚记录，包括处罚结果、处罚日期、处罚金额、处罚机关等监管处罚信息。适用于企业合规经营情况评估、违规成本分析、行政处罚历史查询等场景。数据更新频率：T+0。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "administrativePenaltyTool"
+  },
+  {
+    "name": "get_bankruptcy_reorganization",
+    "title": "破产重整",
+    "description": "用于查询企业破产重整相关信息，包括案号、申请人、被申请人、公开日期等破产程序信息。适用于企业破产风险识别、重整程序跟踪、债权人申请情况了解等场景。数据更新频率：T+0（全国企业破产重整案件信息网）。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "bankruptcyReorganizationTool"
+  },
+  {
+    "name": "get_business_exception",
+    "title": "经营异常",
+    "description": "用于查询企业是否被列入经营异常名录，包括列入日期、移出原因和决定机关。适用于企业正常经营状态判断、轻微违规情况了解、企业信用修复跟踪等场景。数据更新频率：T+0。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "businessExceptionTool"
+  },
+  {
+    "name": "get_cancellation_record_info",
+    "title": "注销备案",
+    "description": "用于查询企业注销备案情况，包括注销原因、注销日期、公告状态等企业终止经营信息。适用于企业存续状态确认、注销程序了解、经营主体资格查询等场景。数据更新频率：T+0（国家企业信用信息公示系统）。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "cancellationRecordInfoTool"
+  },
+  {
+    "name": "get_case_filing_info",
+    "title": "立案信息",
+    "description": "用于查询企业涉及的法院立案信息，包括案号、案由、立案日期、原被告双方等案件基本信息。适用于企业诉讼情况初步了解、法律纠纷数量统计、案件类型分布分析等场景。数据更新频率：T+0。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "caseFilingInfoTool"
+  },
+  {
+    "name": "get_chattel_mortgage_info",
+    "title": "动产抵押",
+    "description": "查询企业动产抵押信息，包括登记编号、抵押人、抵押权人、债务人履行债务的期限、被担保主债权数额、状态、登记日期。适用于动产融资评估场景。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "chattelMortgageInfoTool"
+  },
+  {
+    "name": "get_court_notice",
+    "title": "法院公告",
+    "description": "用于查询企业涉及的法院公告信息，包括公告类型、案由、原告被告信息、刊登日期等司法公告内容。适用于企业法律事务公告查询、诉讼当事人信息了解、司法程序进展跟踪等场景。数据更新频率：T+0。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "courtNoticeTool"
+  },
+  {
+    "name": "get_default_info",
+    "title": "违约事项",
+    "description": "查询企业债券违约、票据违约、非标资产违约信息，包括债券简称、债券类型、违约状态、首次违约日期、累计违约本金、累计违约利息、到期日期。适用于债券投资风险分析场景。数据更新频率：T+0（交易所及债券市场公开披露）。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "defaultInfoTool"
+  },
+  {
+    "name": "get_disciplinary_list",
+    "title": "惩戒名单",
+    "description": "查询企业惩戒名单信息，包括类型、惩戒名单领域、列入原因、列入机关、列入日期。适用于信用评估场景。数据更新频率：T+0（国家信用信息共享平台）。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "disciplinaryListTool"
+  },
+  {
+    "name": "get_dishonest_info",
+    "title": "失信信息",
+    "description": "用于查询企业是否存在失信信息，包括失信被执行人名称、涉案金额、执行法院、立案日期、发布日期。适用于企业信用评估、法律风险分析、欠款违约情况调查等场景。数据更新频率：T+0（最高人民法院中国执行信息公开网）。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "dishonestInfoTool"
+  },
+  {
+    "name": "get_environmental_penalty",
+    "title": "环保处罚",
+    "description": "用于查询企业受到的环保行政处罚，包括处罚结果、处罚日期、处罚单位、处罚金额等环境违法信息。适用于企业环保合规情况评估、环境风险控制、绿色经营能力判断等场景。数据更新频率：T+0。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "environmentalPenaltyTool"
+  },
+  {
+    "name": "get_equity_freeze",
+    "title": "股权冻结",
+    "description": "用于查询企业股权被司法冻结的情况，包括被冻结股权数额、冻结期限、执行法院等股权受限信息。适用于股东权益风险评估、股权变更限制了解、司法保全措施查询等场景。数据更新频率：T+1。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "equityFreezeTool"
+  },
+  {
+    "name": "get_equity_pledge_info",
+    "title": "股权出质",
+    "description": "用于查询企业股权出质情况，包括出质人、质权人、出质股权数额、登记日期、出质状态等股权融资信息。适用于企业融资状况分析、股权风险评估、股东资金需求判断等场景。数据更新频率：T+1。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "equityPledgeInfoTool"
+  },
+  {
+    "name": "get_exit_restriction",
+    "title": "限制出境",
+    "description": "查询企业相关人员被法院限制出境的情况。适用于高管个人风险排查、重大案件执行跟踪及司法强制措施预警场景。数据更新频率：T+0。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "exitRestrictionTool"
+  },
+  {
+    "name": "get_guarantee_info",
+    "title": "担保信息",
+    "description": "查询企业担保信息，包括担保方、被担保方、担保方式、担保金额、履行状态、公告日期。适用于评估企业担保风险场景。数据更新频率：T+0。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "guaranteeInfoTool"
+  },
+  {
+    "name": "get_hearing_notice",
+    "title": "开庭公告",
+    "description": "用于查询企业作为当事人的开庭公告信息，包括案号、案由、开庭时间、当事人身份等庭审排期信息。适用于企业诉讼动态跟踪、庭审时间安排查询、法律纠纷进展了解等场景。数据更新频率：T+0。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "hearingNoticeTool"
+  },
+  {
+    "name": "get_high_consumption_restriction",
+    "title": "限制高消费",
+    "description": "用于查询企业是否存在被法院限制高消费的情况，包括限制法定代表人、申请人、立案日期等执行信息。适用于信用风险评估、合作伙伴风险排查、法律风险预警等场景。数据更新频率：T+0（最高人民法院中国执行信息公开网）。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "highConsumptionRestrictionTool"
+  },
+  {
+    "name": "get_judgment_debtor_info",
+    "title": "被执行人",
+    "description": "用于查询企业作为被执行人的案件信息，包括执行标的、立案时间、执行法院等执行程序信息。适用于企业债务执行情况了解、强制执行风险判断、执行金额规模评估等场景。数据更新频率：T+0（最高人民法院中国执行信息公开网）。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "judgmentDebtorInfoTool"
+  },
+  {
+    "name": "get_judicial_auction",
+    "title": "司法拍卖",
+    "description": "用于查询企业资产被司法拍卖的信息，包括拍卖标题、起拍价、评估价、拍卖时间、处置单位等资产处置情况。适用于企业资产被执行处置了解、司法变现情况跟踪、债权人受偿可能性评估等场景。适用于资产处置分析场景。数据更新频率：T+0（各省法院司法拍卖平台）。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "judicialAuctionTool"
+  },
+  {
+    "name": "get_judicial_documents",
+    "title": "裁判文书",
+    "description": "用于查询企业涉及的法院判决文书，包括案件案由、裁判结果、涉案金额、当事人信息等司法判决信息。适用于企业法律纠纷历史分析、诉讼风险评估、判决结果查询等场景。数据更新频率：T+1至T+7（裁判文书公开存在一定延迟）。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "judicialDocumentsTool"
+  },
+  {
+    "name": "get_land_mortgage_info",
+    "title": "土地抵押",
+    "description": "查询企业土地抵押信息，包括土地坐落、抵押人、抵押权人、抵押起止日期、抵押面积、抵押金额、抵押土地用途。适用于土地资产抵押分析场景。数据更新频率：T+1（自然资源部土地抵押登记系统）。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "landMortgageInfoTool"
+  },
+  {
+    "name": "get_liquidation_info",
+    "title": "清算信息",
+    "description": "查询企业清算信息，包括清算组负责人、清算组成员。适用于企业破产或解散清算分析场景。数据更新频率：T+1。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "liquidationInfoTool"
+  },
+  {
+    "name": "get_pre_litigation_mediation",
+    "title": "诉前调解",
+    "description": "查询企业诉前调解记录，包括案号、案由、当事人、法院、立案日期 。适用于纠纷解决跟踪场景。数据更新频率：T+0。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "preLitigationMediationTool"
+  },
+  {
+    "name": "get_public_exhortation",
+    "title": "公示催告",
+    "description": "查询企业公示催告信息，包括票据号、申请人、持票人、票面金额、票据类型、发布机关、公告日期。适用于票据遗失等法律程序查询场景。数据更新频率：T+0。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "publicExhortationTool"
+  },
+  {
+    "name": "get_serious_violation",
+    "title": "严重违法",
+    "description": "查询企业是否被列入严重违法失信名单。适用于企业准入严选、重大合规性审查及最高等级信用风险评估场景。数据更新频率：T+1（市场监管总局企业信用信息公示系统）。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "seriousViolationTool"
+  },
+  {
+    "name": "get_service_announcement",
+    "title": "劳动仲裁",
+    "description": "查询企业涉及的劳动仲裁开庭公告和送达公告，包括仲裁案号、申请人、被申请人及公告发布日期。适用于企业劳动纠纷监控、劳动仲裁程序跟踪及用工风险排查场景。数据更新频率：T+0。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "serviceAnnouncementTool"
+  },
+  {
+    "name": "get_service_notice",
+    "title": "送达公告",
+    "description": "查询企业相关送达公告，包括案号、案由、当事人、法院、发布日期。适用于法律文书送达情况场景。数据更新频率：T+0。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "serviceNoticeTool"
+  },
+  {
+    "name": "get_simple_cancellation_info",
+    "title": "简易注销",
+    "description": "用于查询企业简易注销相关信息，包括公告期、注销结果、登记机关等简化注销程序情况。适用于企业注销程序了解、简易注销适用情况确认、市场主体退出机制跟踪等场景。数据更新频率：T+1。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "simpleCancellationInfoTool"
+  },
+  {
+    "name": "get_stock_pledge_info",
+    "title": "股权质押",
+    "description": "查询企业股权质押信息，包括质押人、质押人参股企业、质押权人、质押股份总数、质押股份市值、状态、公告日期。适用于股票质押风险分析场景。数据更新频率：T+0（交易所公告披露）。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "stockPledgeInfoTool"
+  },
+  {
+    "name": "get_tax_abnormal",
+    "title": "税务非正常户",
+    "description": "查询企业税务非正常户记录。适用于企业税务合规性扫描、税务黑名单核查及合作伙伴财务风险预警场景。数据更新频率：T+0（国家税务总局）。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "taxAbnormalTool"
+  },
+  {
+    "name": "get_tax_arrears_notice",
+    "title": "欠税公告",
+    "description": "用于查询企业欠税情况，包括欠税税种、欠税余额、当前新发生的欠税金额、发布单位和发布日期等税务欠款信息。适用于企业纳税信用评估、税务风险判断、欠税情况跟踪等场景。数据更新频率：T+0（各省市税务局公告）。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "taxArrearsNoticeTool"
+  },
+  {
+    "name": "get_tax_violation",
+    "title": "税收违法",
+    "description": "用于查询企业税收违法信息，包括案件性质、所属税务机关、发布日期等税务违法情况。适用于企业纳税信用评估、税务合规风险识别、税收违法行为类型分析等场景。数据更新频率：T+0（国家税务总局重大税收违法失信主体公告）。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "taxViolationTool"
+  },
+  {
+    "name": "get_terminated_cases",
+    "title": "终本案件",
+    "description": "用于查询企业涉及的终结本次执行程序案件信息，包括终本日期、执行标的、未履行金额等执行终结情况。适用于企业执行风险了解、债务清偿能力评估、终本案件统计分析等场景。数据更新频率：T+1（最高人民法院中国执行信息公开网）。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "terminatedCasesTool"
+  },
+  {
+    "name": "get_valuation_inquiry",
+    "title": "询价评估",
+    "description": "查询企业资产询价评估信息，包括案号、标的物、所有人、当事人、询价结果、法院、发布日期。适用于资产评估场景。数据更新频率：T+0。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "searchKey": {
+          "type": "string",
+          "description": "企业名称或统一社会信用代码"
+        }
+      },
+      "required": [
+        "searchKey"
+      ],
+      "$schema": "http://json-schema.org/draft-07/schema#"
+    },
+    "outputSchema": null,
+    "icons": null,
+    "annotations": null,
+    "meta": null,
+    "execution": null,
+    "_registration_tool": "valuationInquiryTool"
+  }
+]

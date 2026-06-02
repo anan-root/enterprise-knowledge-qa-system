@@ -1,0 +1,50 @@
+# Environment and secrets
+.env
+*.env
+**/.env
+**/*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Frontend
+frontend1/node_modules/
+frontend1/dist/
+frontend1/.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Generated knowledge indexes and caches
+*.pkl
+*_bm25.txt
+*.faiss
+*.index
+
+# Generated evaluation artifacts
+backend/qa_engine/app/model_evaluation/**/result/
+backend/qa_engine/app/model_evaluation/evaluation_results/
+backend/qa_engine/app/model_evaluation/**/answers_*.json
+backend/qa_engine/app/model_evaluation/**/*.xlsx
+backend/qa_engine/app/model_evaluation/**/*.docx
+
+# Logs and local files
+*.log
+logs/
+tmp/
+temp/
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
